@@ -103,7 +103,9 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
+h1::selection{
+  color: greenyellow;
+}
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -10980,4 +10982,35 @@ section.resume-section .resume-section-content {
 
 #zoom:hover{
   transform: scale(1.5);
+}
+#social{
+  transition: transform .2s; /* Animation */
+}
+#social:hover{
+  padding: 5px;
+  transform: scale(1.5);
+}
+span::selection{
+  color: greenyellow;
+}
+p::selection{
+  color: greenyellow;
+}
+h2::selection{
+  color: greenyellow;
+}
+h3::selection{
+  color: greenyellow;
+}
+h4::selection{
+  color: greenyellow;
+}
+h5::selection{
+  color: greenyellow;
+}
+h6::selection{
+  color: greenyellow;
+}
+div::selection{
+  color: greenyellow;
 }
