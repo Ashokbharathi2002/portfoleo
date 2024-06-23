@@ -11074,3 +11074,30 @@ div::selection{
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+#tablink:hover{
+  transform: translateX(50px);
+  transition: 2s;
+}
+#profileimg{
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-style: double solid;
+}
+
+#profileimg:hover{
+  transform: rotatex(360deg);
+  transition: 2s;
+}
+
+#tabledataelement{
+  padding: 50px;
+  transition: transform .2s; /* Animation */
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+}
+#tabledataelement:hover{
+  background-color: lightgreen;
+  transform: scale(1.1);
+}
