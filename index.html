@@ -20,9 +20,13 @@
                 });
             })();
           </script>
-        <!-- Google fonts-->
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        
+        <!-- Google fonts
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        -->
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/index.css" rel="stylesheet" /> 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -63,7 +67,9 @@
 
                     <!--end-->
                     <div class="subheading mb-5">
-                        Mariamman Kovil State,PANRUTI.
+                      <P style="font-style: italic;font-size: 70px;margin: 9px;" id="subtitle">
+                        Web Developer
+                      </P>
                         <a href="mailto:ashokbharathi1712@gmail.com">ashokbharathi1712@gmail.com</a>
                         <a href="#PERSONAL INFORMATION"><button type="button" class="btn">More info></button></a>
                     </div>
@@ -339,34 +345,7 @@
                           </div>
                           <button class="glow-on-hover" onclick="sendemail()" type="submit">Submit 📨</button>
                         </form>
-                        <!--js to send data-->
-                        <script>
-                            import emailjs from '@emailjs/browser';
-                            function sendemail(){
-
-                              var email=document.getElementById("email").value;
-                              var subject=document.getElementById("formsubject").value;
-                              var from_name=document.getElementById("fullname").value;
-                              var message=document.getElementById("message").value;
-
-                              var templateParams = {
-                                email: email,
-                                subject: formsubject,
-                                from_name: from_name,
-                                message: message
-                              };
-
-                              emailjs.send('service_l7nz5ed', 'template_4rp4qs9', templateParams)
-                              .then(function(response) {
-                                console.log('SUCCESS!', response.status, response.text);
-                                window.alert("Sent successfully!");
-                                
-                              })
-
-                                
-                            }
-                            
-                        </script>
+                    
                       </div>
                       <div class="col-12 border border-4 shadow-lg p-3 mb-5 bg-body rounded">social media
                         <div class="social-icons">
