@@ -11014,7 +11014,7 @@ h6::selection{
 div::selection{
   color: greenyellow;
 }
-
+/*button animashon*/
 .glow-on-hover {
     width: 220px;
     height: 50px;
@@ -11079,6 +11079,7 @@ div::selection{
   transform: translateX(50px);
   transition: 2s;
 }
+/*img*/
 #profileimg{
   border-top-left-radius: 100px;
   border-bottom-right-radius: 100px;
@@ -11086,8 +11087,9 @@ div::selection{
 }
 
 #profileimg:hover{
-  transform: rotatex(360deg);
+ /* transform: rotatex(360deg);*/
   transition: 2s;
+  transform: rotate3d(data-popper-placement);
 }
 
 #tabledataelement{
@@ -11100,4 +11102,56 @@ div::selection{
 #tabledataelement:hover{
   background-color: lightgreen;
   transform: scale(1.1);
+}
+/* inbox grafices*/
+#send_inbox{
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  color: black;
+}
+#send_inbox:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+#send_inbox:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+#send_inbox:active {
+  color: #000
+}
+
+#send_inbox:active:after {
+  background: transparent;
+}
+
+#send_inbox:hover:before {
+  opacity: 1;
+}
+.profical_1{
+  font-size: larger;
 }
