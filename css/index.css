@@ -11081,15 +11081,13 @@ div::selection{
 }
 /*img*/
 #profileimg{
-  border-top-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  border-style: double solid;
+ border-radius: 50px;
+
 }
 
 #profileimg:hover{
- /* transform: rotatex(360deg);*/
+  transform: rotatey(360deg);
   transition: 2s;
-  transform: rotate3d(data-popper-placement);
 }
 
 #tabledataelement{
