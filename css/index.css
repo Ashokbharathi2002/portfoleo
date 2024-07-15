@@ -11153,3 +11153,12 @@ div::selection{
 .profical_1{
   font-size: larger;
 }
+#tablink:hover{
+  cursor: -webkit-grab; cursor: grab;
+}
+#social:hover{
+  cursor: none;
+}
+#profileimg:hover{
+  cursor: none;
+}
