@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>ASHOK BHARATHI</title>
+        <title q:name>ASHOK BHARATHI</title>
         <link rel="icon" type="image/x-icon" href="img/Logo.Ico.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -55,7 +55,7 @@
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">
+                    <h1 class="mb-0" id="hcol">
                       ashok <span class="text-primary">bharathi.e</span>
                     </h1>
                     
@@ -123,7 +123,7 @@
             <!-- Experience-->
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
-                    <h2 class="mb-5" >Experience</h2>
+                    <h2 class="mb-5" id="hcol" >Experience</h2>
                     <!--
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
@@ -141,7 +141,7 @@
             <!-- Education-->
             <section class="resume-section" id="education">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
+                    <h2 class="mb-5" id="hcol">Education</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">SRI
@@ -168,7 +168,7 @@
             <!-- Skills-->
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
-                  <h2 class="mb-5">Skills</h2>
+                  <h2 class="mb-5" id="hcol">Skills</h2>
                   <div class="subheading mb-3">Programming Languages & Tools</div>
                   <div class="container text-center">
                     <!--grid-->
@@ -207,7 +207,7 @@
             <!-- ce-->
             <section class="resume-section" id="#">
               <div class="resume-section-content">
-                <h2 class="mb-5">certificates</h2>
+                <h2 class="mb-5" id="hcol">certificates</h2>
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                   <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -241,7 +241,7 @@
             <!--projects-->
             <section class="resume-section" id="project">
               <div class="resume-section-content">
-                <h2 class="mb-5">project</h2>
+                <h2 class="mb-5" id="hcol">project</h2>
                 <h3>SURVEILLANCE ROBOTIC CAR USING IOT</h3>
                 <h4>BE final year project</h4>
                 <p>This project utilizes IoT technology for surveillance 
@@ -259,7 +259,7 @@
             <!-- Interests-->
             <section class="resume-section" id="PERSONAL INFORMATION">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">PERSONAL INFORMATION</h2>
+                    <h2 class="mb-5" id="hcol">PERSONAL INFORMATION</h2>
 
                     <table class="table  table-striped" id="tabledata">
                         <thead>
@@ -348,34 +348,31 @@
 
             <section class="resume-section" id="Contact">
               <div class="resume-section-content">
-                  <h2 class="mb-5">Contact</h2>
+                  <h2 class="mb-5" id="hcol">Contact</h2>
                   
                   <div class="container">
                     <div class="row">
                       <div class="col-12 border border-4 shadow-lg p-3 mb-5 bg-body rounded">
                         
-                        <form  method="post" id="my_form" name="my_form">
+                        <form  method="post" action="https://sheetdb.io/api/v1/q4s313hvp9iw5" id="my_form" name="my_form">
                           <div class="mb-3">
                             <label for="fullname" class="form-label">Full name</label>
-                            <input type="text" class="form-control" id="fullname" name="fullname" required>
+                            <input type="text" class="form-control" id="fullname" name="data[fullname]" required>
                           </div>
                           <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+                            <input type="email" class="form-control" id="email" name="data[email]" placeholder="name@example.com" required>
                           </div>
                           <div class="mb-3">
                             <label for="formsubject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="formsubject" name="formsubject" required>
+                            <input type="text" class="form-control" id="formsubject" name="data[formsubject]" required>
                           </div>
                           <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                            <textarea class="form-control" id="message" name="data[message]" rows="3"></textarea>
                           </div>
-                          <button class="glow-on-hover"  type="submit">Submit 📨</button>
+                          <button class="glow-on-hover" onclick="senddata()" type="submit"  >Submit 📨</button>
                         </form>
-
-                        
-                    
                       </div>
                       <div class="col-12 border border-4 shadow-lg p-3 mb-5 bg-body rounded">social media
                         <div class="social-icons">
@@ -392,21 +389,32 @@
 
           <section class="resume-section" id="theam">
             <div class="resume-section-content">
-                <h2 class="mb-5">Theam</h2>
+                <h2 class="mb-5" id="hcol">Theam</h2>
     
                 <div class="border border-3 w-80 p-3 ">
                   <h5>theam</h5>
                   <h6>background color</h6>
                   <input type="text" class="form-control" id="backgroundcolor" required>
                   <br>
+                  <h6>text color</h6>
+                  <input type="text" class="form-control" id="textcolor">
+                  <br>
+                  <h6>heading color</h6>
+                  <input type="text" class="form-control" id="headingcolor">
+                  <br>
                   <button class="glow-on-hover" onclick="theam()" type="submit">change</button>
                   <!--SCRIPT-->
                   <script>
                     function theam(){
                       var bgcolor = document.getElementById("backgroundcolor").value;
-
                       document.getElementById("page-top").style.backgroundColor=bgcolor
-                      document.getElementById("page-top").style.color=tcolor
+
+                      var textcolor = document.getElementById("textcolor").value;
+                      document.getElementById("page-top").style.color=textcolor
+
+                      var headingcolor = document.getElementById("headingcolor").value;
+                      document.getElementById("tabledataelement").style.color=headingcolor
+
                     }
                   </script>
 
@@ -422,6 +430,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
         <!--jqurey-->
     </body>
 </html>
