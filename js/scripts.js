@@ -1,5 +1,6 @@
-
-  var form = document.getElementById('sheetdb-form');
+document.getElementById("sucmsg").style.display="none";
+ 
+ var form = document.getElementById('sheetdb-form');
   form.addEventListener("submit", e => {
     e.preventDefault();
     fetch(form.action, {
@@ -8,7 +9,8 @@
     }).then(
         response => response.json()
     ).then((html) => {
-        alert("Your message has been sent successfully.")
+        document.getElementById("sucmsg").style.display="block";
+        document.getElementById("msgform").style.display="none";
         form.reset()
 
     });

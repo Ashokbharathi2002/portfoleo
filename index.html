@@ -353,28 +353,65 @@
                   
                   <div class="container">
                     <div class="row">
-                      <div class="col-12 border border-4 shadow-lg p-3 mb-5 bg-body rounded">
-                        
-                        <form  method="post" action="https://sheetdb.io/api/v1/q4s313hvp9iw5" id="sheetdb-form" name="my_form">
-                          <div class="mb-3">
-                            <label for="fullname" class="form-label">Full name</label>
-                            <input type="text" class="form-control" id="fullname" name="data[fullname]" required>
-                          </div>
-                          <div class="mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" name="data[email]" placeholder="name@example.com" required>
-                          </div>
-                          <div class="mb-3">
-                            <label for="formsubject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="formsubject" name="data[formsubject]" required>
-                          </div>
-                          <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="data[message]" rows="3"></textarea>
-                          </div>
-                          <button class="glow-on-hover" type="submit"  >Submit 📨</button>
-                        </form>
+                      <div class="col-12 border border-4 shadow-lg p-3 mb-5 bg-body rounded" id="msgform">
+                        <div >
+                          <form  method="post" action="https://sheetdb.io/api/v1/q4s313hvp9iw5" id="sheetdb-form" name="my_form">
+                            <div class="mb-3">
+                              <label for="fullname" class="form-label">Full name</label>
+                              <input type="text" class="form-control" id="fullname" name="data[fullname]" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="email" class="form-label">Email address</label>
+                              <input type="email" class="form-control" id="email" name="data[email]" placeholder="name@example.com" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="formsubject" class="form-label">Subject</label>
+                              <input type="text" class="form-control" id="formsubject" name="data[formsubject]" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="message" class="form-label">Message</label>
+                              <textarea class="form-control" id="message" name="data[message]" rows="3"></textarea>
+                            </div>
+                            <button class="glow-on-hover" type="submit"  >Submit 📨</button>
+                          </form>
+                        </div>
                       </div>
+                      <!-- card -->
+                      <div id="sucmsg" class="bg-success p-2 text-dark bg-opacity-25 border border-success shadow-lg p-3 mb-5 bg-body-tertiary rounded ">
+                        <div class="container overflow-hidden text-center">
+                          <div class="row gx-5">
+                            <div class="col">
+                             <div class="p-3">
+                              <h2>your message was sent successfully</h2>
+                              <p class="fw-bolder lh-base text-center ">Thank You for Visiting My Portfolio!
+                                I am deeply grateful for your time and interest in my work. Your visit means a lot to me, and I hope you find my portfolio both inspiring and informative.
+                                Thank you for your support and for being a part of my creative journey. I look forward to connecting with you and sharing more of my work in the future.
+                                Warmest regards, E.ASHOK BHARATHI</p>
+                             </div>
+                            </div>
+                            <div class="col">
+                              <div class="p-3">
+                                <div class="card">
+                            <div class="background">
+                            </div>
+                            <div class="logo">
+                            Socials
+                            </div>
+
+                            <a href="https://wa.me/918072121367"><div class="box box1"><i class="bi bi-whatsapp"></i></span></div></a>
+
+                            <a href="https://in.linkedin.com/in/ashok-bharathi-a33047260?trk=profile-badge"><div class="box box2"> <span class="icon"><i class="fab fa-linkedin-in"></i></span></div></a>
+
+                            <a href="https://github.com/Ashokbharathi2002"><div class="box box3"><span class="icon"><i class="bi bi-github"></i></span></div></a>
+
+                            <div class="box box4"></div>
+                          </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- sol links -->
                       <div class="col-12 border border-4 shadow-lg p-3 mb-5 bg-body rounded">social media
                         <div class="social-icons">
                           <a class="social-icon" target="_blank" id="social" href="https://wa.me/918072121367"><i class="bi bi-whatsapp"></i></a>                     
