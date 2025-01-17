@@ -23,10 +23,21 @@ function msddata() {
     });
   });
 // dark mode
-  function myFunction() {
-    var element = document.body;
-    var heder1 = document.section,h2;
+function myFunction() {
+  var element = document.body;
+  var heder1 = document.section,h2;
+  element.classList.toggle("dark-mode");
+  heder1.classList.toggle("hidding");
+}
 
-    element.classList.toggle("dark-mode");
-    heder1.classList.toggle("hidding");
- }
+function myotp() {
+  let otp = '';
+  for (let i = 0; i < 6; i++) {
+    otp += Math.floor(Math.random() * 10);
+  }
+  console.log(otp)
+  document.getElementById('refens').innerHTML = otp;
+  document.getElementById("otpnumber").value = otp;
+  document.getElementById("otpnumber2").value = otp;
+
+}

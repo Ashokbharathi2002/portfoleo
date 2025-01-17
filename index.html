@@ -443,19 +443,19 @@
                               <label for="message" class="form-label">Message</label>
                               <textarea class="form-control" id="message" name="data[message]" rows="3"></textarea>
                             </div>
-                            <!-- <p id="refens" name="data[refens]"></p> -->
+                            <div class="mb-3 form-check">
+                              <input type="checkbox" class="form-check-input" onchange="myotp()" id="exampleCheck1" required>
+                              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <div class="mb-3" style="display: none;" >
+                              <label for="formsubject" class="form-label" >refens</label>
+                              <input type="number" class="form-control" id="otpnumber" name="data[refens]" required>
+                            </div>
+                            <p id="refens" style="display: none;" name="data[refens]"></p>
                             <button class="glow-on-hover" type="submit" >Submit 📨</button>
                           </form>
                         </div>
                       </div>
-                      <!-- otp -->
-                      <script>
-                        let otp = '';
-                        for (let i = 0; i < 6; i++) {
-                          otp += Math.floor(Math.random() * 10);
-                        }
-                        document.getElementById('refens').innerHTML = otp;
-                      </script>
                       <!-- card -->
                       <div id="sucmsg" class="bg-success p-2 text-dark bg-opacity-25 border border-success shadow-lg p-3 mb-5 bg-body-tertiary rounded ">
                         <div class="container overflow-hidden text-center">
@@ -466,7 +466,55 @@
                               <p class="fw-bolder lh-base text-center ">Thank You for Visiting My Portfolio!
                                 I am deeply grateful for your time and interest in my work. Your visit means a lot to me, and I hope you find my portfolio both inspiring and informative.
                                 Thank you for your support and for being a part of my creative journey. I look forward to connecting with you and sharing more of my work in the future.
-                                Warmest regards, E.ASHOK BHARATHI</p>
+                                Warmest regards, E.ASHOK BHARATHI
+                              </p>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                message
+                              </button>
+
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="exampleModalLabel">Message again</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <form action="https://sheetdb.io/api/v1/q4s313hvp9iw5" method="post" id="sheetdb_form" name="my_form">
+                                        <div class="mb-3" style="display: none;">
+                                          <label for="formsubject" class="form-label">refens</label>
+                                          <input type="number" class="form-control" id="otpnumber2" name="data[refens2]" required>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="message" class="form-label">Message again</label>
+                                          <textarea class="form-control" id="message" name="data[message2]" rows="3" required></textarea>
+                                        </div>
+                                        <button class="glow-on-hover"id="msg2btn" type="submit" >Submit 📨</button>
+                                      </form>
+                                      <script>
+                                        var form = document.getElementById('sheetdb_form');
+                                        form.addEventListener("submit", e => {
+                                          e.preventDefault();
+                                          fetch(form.action, {
+                                              method : "POST",
+                                              body: new FormData(document.getElementById("sheetdb_form")),
+                                          }).then(
+                                              response => response.json()
+                                          ).then((html) => {
+                                              alert("Thank You for your message")
+
+                                          });
+                                        });
+                                      </script>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                              </div>
                             </div>
                             <div class="col">
